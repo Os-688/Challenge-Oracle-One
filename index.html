@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <Head>
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Encriptador-de-Textos</title>
+
+        <link rel="stylesheet" href="reset.css">
+        
+        <link rel="stylesheet" href="style.css">
+
+        <link rel="js" href="script.js">
+
+    </Head>
+
+    <body>
+
+        <header>
+
+            <img src="imagenes/Logo1x.png" alt="Logo a" class="logo">
+
+        </header>
+
+        <main>
+
+            <section>
+                
+                <textarea  class="texto-a-encriptar" cols="30" rows="10" placeholder="Ingresa el texto aqui"></textarea>
+
+                <div>
+
+                    <h6 class="informacion"> <img src="imagenes/Frame 1.png" alt="Solo usa letras minusculas sin acentos"></h6>
+
+                </div>
+                
+                <div>
+
+                    <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+
+                    <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+
+                </div>
+
+            </section>
+
+            <section>
+
+                <textarea  class="mensaje-encriptado" cols="20" rows="10" placeholder="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar."></textarea>
+
+
+                <div class="botones">
+
+                    <button class="copiar">Copiar</button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+        </footer>
+
+    </Body>
+
+</html>
+
+<script src="script.js"></script>
