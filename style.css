@@ -86,6 +86,28 @@ main{
     outline: none;
 }
 
+.caja{
+    width: 260px;
+    font-size: 21px;
+    height: 190px;
+    position: absolute;
+    top: 500px;
+    right: 76px;
+    background-color: white;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.caja h4{
+    background-color: white;
+    font-weight: bold;
+}
+
+.caja p{
+    background: white;
+    font-size: 16px;
+}
+
 
 
 .copiar{
