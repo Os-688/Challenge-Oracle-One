@@ -80,6 +80,8 @@ main{
     background-position: center;
     background-position-y: 140px;
     height: 702px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: calc(1em - 5px);
 }
 
 .mensaje-encriptado:focus{
@@ -92,11 +94,24 @@ main{
     height: 190px;
     position: absolute;
     top: 500px;
-    right: 76px;
+    right: 82px;
     background-color: white;
     text-align: center;
     line-height: 1.7;
-    font-family: 'Roboto Mono', monospace;;
+    font-family: 'Roboto Mono', monospace;
+    font-style: italic;
+    animation: animacion-explicacion 9s linear 2s infinite alternate;
+    color: rgba(73,64,211,5);
+    text-shadow: 1px 1px rgb(102 186 255);
+    overflow: hidden;
+}
+
+@keyframes animacion-explicacion {
+    0%{top: 500px; right: 70px;}
+    25%{right: 84px; top: 540px;  }
+    50%{right: 96px;top: 500px; }
+    75%{right: 94px; top: 540px;}
+    100%{top: 520px; right: 80px;}
 }
 
 .caja h4{
@@ -107,6 +122,7 @@ main{
 .caja p{
     background: white;
     font-size: 16px;
+    font-weight: 500;
 }
 
 
