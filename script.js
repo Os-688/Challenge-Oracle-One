@@ -1,5 +1,7 @@
 const textArea = document.querySelector(".texto-a-encriptar");
 const mensaje = document.querySelector(".mensaje-encriptado");
+const tutorial = document.getElementById("caja");
+const copiar = document.querySelector(".copiar");
 
 /*
 La letra "e" es convertida para "enter"
@@ -14,6 +16,18 @@ function btnEncriptar(){
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none";
+    tutorial.style.animationPlayState = "paused";
+    tutorial.style.visibility = "hidden";
+    copiar.style.visibility = "visible";
+}
+
+function btnDesencriptar(){
+    const textoEncriptado = desencriptar(textArea.value);
+    mensaje.value = textoEncriptado;
+    textArea.value = "";
+    tutorial.style.animationPlayState = "paused";
+    tutorial.style.visibility = "hidden";
+    copiar.style.visibility = "visible";
 }
 
 function encriptar(stringEncriptado){
@@ -26,13 +40,6 @@ function encriptar(stringEncriptado){
         }
     }
     return stringEncriptado;     
-}
-
-
-function btnDesencriptar(){
-    const textoEncriptado = desencriptar(textArea.value);
-    mensaje.value = textoEncriptado;
-    textArea.value = "";
 }
 
 function desencriptar(stringDesencriptado){
