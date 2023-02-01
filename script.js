@@ -54,4 +54,10 @@ function desencriptar(stringDesencriptado){
     return stringDesencriptado;
 }
 
+function cambioDeAnimacion(){
+    tutorial.style.animation = "animacion-explicacion 9s linear 0s infinite alternate";
+}
+tutorial.addEventListener("animationend", cambioDeAnimacion);
+
+
 
