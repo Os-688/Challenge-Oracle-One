@@ -115,16 +115,18 @@ main{
     25%{right: -245px; transform: scaleX(1.1) rotate(6deg);}
     50%{right: -119px; transform: rotate(8deg) scaleX(1.1) scaleY(0.95); }
     75%{right:0px; transform: scaleX(0.88) scaleY(0.90); }
-    90%{right: 80px; transform: rotate(-6deg) scaleX(0.95) scaleY(0.95);}
-    100%{right: 81px; transform: rotate(0deg) scaleX(1) scaleY(1) ;}
+    87.5%{right: 80px; transform: rotate(-6deg) scaleX(0.95) scaleY(0.95);}
+    96%{right: 62px;  top: 500px; transform: rotate(0deg) scaleX(1) scaleY(1) ;}
+    100%{right: 62px;  top: 500px; }
 }
 
 @keyframes animacion-explicacion {
-    0%{top: 500px; right: 62px; transform: scaleX(1.05);}
-    25%{right: 72px; top: 540px; transform: scaleY(1.1); }
-    50%{right: 81px;top: 500px; transform: rotateX(35deg);}
-    75%{right: 92px; top: 540px; transform: scaleX(1.05);}
-    100%{top: 520px; right: 80px; transform: scaleY(1.05);}
+    0%{ right: 62px; top: 490px;transform: rotateX(10deg)   scaleX(1.06)  scaleY(0.89)}
+    20%{right: 74px; top: 540px; transform: rotateY(8deg)   scaleX(0.92)  scaleY(1.04); }
+    40%{right: 87px; top: 500px; transform: rotateX(28deg)  scaleX(1.06)  scaleY(0.91);}
+    60%{right: 104px; top: 550px; transform: rotateX(4deg)   scaleX(0.91)   scaleY(1.05);}
+    80%{ right: 85px; top: 500px; transform: rotateY(25deg) scaleX(1.05)  scaleY(0.87) ;}
+    100%{right: 68px; top: 550px; ; transform: rotateX(4deg)scaleX(0.9)  scaleY(1.06);}
 }
 
 #caja h4{
@@ -142,7 +144,7 @@ main{
 
 
 
-.copiar{
+#copiar{
     border: 1px solid #0a3871;
     border-radius: 24px;
     color: #0a3871;

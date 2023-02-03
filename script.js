@@ -1,7 +1,7 @@
 const textArea = document.querySelector(".texto-a-encriptar");
 const mensaje = document.querySelector(".mensaje-encriptado");
 const tutorial = document.getElementById("caja");
-const copiar = document.querySelector(".copiar");
+const copiar = document.querySelector("#copiar");
 
 /*
 La letra "e" es convertida para "enter"
@@ -55,9 +55,27 @@ function desencriptar(stringDesencriptado){
 }
 
 function cambioDeAnimacion(){
-    tutorial.style.animation = "animacion-explicacion 9s linear 0s infinite alternate";
+    tutorial.style.animation = "animacion-explicacion 16s linear -0.09s infinite alternate";
 }
 tutorial.addEventListener("animationend", cambioDeAnimacion);
 
 
-
+copiar.onclick = function(){
+    let texto = mensaje.value;
+    navigator.clipboard.writeText(texto)
+    .then(()=>{
+        alert("Text copied to clipboard");
+    })
+    .catch(err => { 
+        alert("Error in copying text: ", err)
+    })
+}
+/* 
+function myFunction() {
+   
+     // Copy the text inside the text field
+    navigator.clipboard.writeText(mensaje.value);
+  
+    // Alert the copied text
+    alert("Copied the text: " + mensaje.value);
+  }  */
