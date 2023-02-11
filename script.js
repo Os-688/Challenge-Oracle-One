@@ -2,6 +2,8 @@ const textArea = document.querySelector(".texto-a-encriptar");
 const mensaje = document.querySelector(".mensaje-encriptado");
 const tutorial = document.getElementById("caja");
 const copiar = document.querySelector("#copiar");
+const textoPrimero = document.getElementsByTagName("h4");
+const textoSegundo = document.querySelector("#caja p")
 var anima = false;
 
 /*
@@ -22,18 +24,17 @@ function btnEncriptar(){
     tutorial.style.visibility = "hidden";
     copiar.style.visibility = "visible";
     anima = true;
-    tutorial.style.transition = "all 0.1s";
 }
 
 function btnDesencriptar(){
     const textoEncriptado = desencriptar(textArea.value);
     mensaje.value = textoEncriptado;
     textArea.value = "";
+    mensaje.style.backgroundImage = "none";
     tutorial.style.animationPlayState = "paused";
     tutorial.style.visibility = "hidden";
     copiar.style.visibility = "visible";
     anima = true;
-    tutorial.style.transition = "all 0.1s";
 }
 
 function encriptar(stringEncriptado){
@@ -62,9 +63,17 @@ function desencriptar(stringDesencriptado){
 
 /* Funcion para cambiar a otra animacion */
 
+var animacionExplicacion = [
+    {transform: "rotateX(10deg) scaleX(1.06) scaleY(0.89)", top: "490px", right: "62px"},
+    {transform: "rotateY(8deg) scaleX(0.92)  scaleY(1.04)", top: "540px", right: "74px"},
+    {transform: "rotateX(28deg)  scaleX(1.06)  scaleY(0.91)", top: "500px", right: "87px"},
+    {transform: "rotateX(4deg)   scaleX(0.91)   scaleY(1.05)", top: "550px", right: "104px"},
+    {transform: "rotateY(25deg) scaleX(1.05)  scaleY(0.87)", top: "500px", right: "85px"}, 
+    {transform: "rotateX(4deg) scaleX(0.9)  scaleY(1.06)", top: "550px", right: "68px"}]
+
 function cambioDeAnimacion(){
-    tutorial.style.animation = "animacion-explicacion 16s linear -0.09s infinite alternate";
-   
+
+    tutorial.animate(animacionExplicacion, { id: "bounce", delay: -1000, iterations: Infinity, duration: 16000, direction: "alternate"});
 }
 
 tutorial.addEventListener("animationend", cambioDeAnimacion);
@@ -75,6 +84,8 @@ function animacionReaparicion(){
     if(anima){
         cambioDeAnimacion();
         tutorial.style.visibility = "visible";
+        mensaje.style.backgroundImage = "url(imagenes/Muñeco.png)";
+        copiar.style.visibility = "hidden";
         anima = false;
     } 
 }
@@ -93,6 +104,7 @@ copiar.onclick = function(){
         alert("Error in copying text: ", err)
     })
 }
+/* Funcion para agregar poco a poco el texto a la caja/tutorial */
 
 /* Funciones opcionales. */
 

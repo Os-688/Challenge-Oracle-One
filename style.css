@@ -119,14 +119,6 @@ main{
     100%{right: 62px;  top: 500px; }
 }
 
-@keyframes animacion-explicacion {
-    0%{ right: 62px; top: 490px;transform: rotateX(10deg)   scaleX(1.06)  scaleY(0.89)}
-    20%{right: 74px; top: 540px; transform: rotateY(8deg)   scaleX(0.92)  scaleY(1.04); }
-    40%{right: 87px; top: 500px; transform: rotateX(28deg)  scaleX(1.06)  scaleY(0.91);}
-    60%{right: 104px; top: 550px; transform: rotateX(4deg)   scaleX(0.91)   scaleY(1.05);}
-    80%{ right: 85px; top: 500px; transform: rotateY(25deg) scaleX(1.05)  scaleY(0.87) ;}
-    100%{right: 68px; top: 550px; ; transform: rotateX(4deg)scaleX(0.9)  scaleY(1.06);}
-}
 
 #caja h4{
     background-color: white;
