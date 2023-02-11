@@ -22,6 +22,7 @@ function btnEncriptar(){
     tutorial.style.visibility = "hidden";
     copiar.style.visibility = "visible";
     anima = true;
+    tutorial.style.transition = "all 0.1s";
 }
 
 function btnDesencriptar(){
@@ -32,6 +33,7 @@ function btnDesencriptar(){
     tutorial.style.visibility = "hidden";
     copiar.style.visibility = "visible";
     anima = true;
+    tutorial.style.transition = "all 0.1s";
 }
 
 function encriptar(stringEncriptado){
@@ -62,6 +64,7 @@ function desencriptar(stringDesencriptado){
 
 function cambioDeAnimacion(){
     tutorial.style.animation = "animacion-explicacion 16s linear -0.09s infinite alternate";
+   
 }
 
 tutorial.addEventListener("animationend", cambioDeAnimacion);
@@ -72,10 +75,11 @@ function animacionReaparicion(){
     if(anima){
         cambioDeAnimacion();
         tutorial.style.visibility = "visible";
+        anima = false;
     } 
 }
 
-setInterval(animacionReaparicion, 60000);
+setInterval(animacionReaparicion, 120000);
 
 /* Funcion para copiar texto */
 
