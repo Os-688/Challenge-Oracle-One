@@ -107,12 +107,7 @@ copiar.onclick = function(){
 
 /* Funcion para agregar poco a poco el texto a la caja/tutorial */
 
-/* var palabrasTextoPrimero =  ["Ningun mensaje fue encontrado."]; */
-/* 
-var palabrasTextoSegundo = ["Ingresa el texto que desees encriptar"]; */
-
-
-var palabrasTexto = ["Ningun mensaje fue encontrado.", "Ingresa el texto que desees encriptar"];
+var palabrasTexto = ["Ningun mensaje fue encontrado.", "Ingresa el texto que desees encriptar."];
 
 var textoPrimeroContenido =  textoPrimero.innerHTML;
 
@@ -124,13 +119,16 @@ var textos = [textoPrimero,textoSegundo];
 
 var AgregarPalabra = false;
 
-var counter = 0;
+var counter = 1;
 
 
 setInterval(function(){
     if (textoContenido[counter].length > 0 && !AgregarPalabra) {
         textos[counter].innerHTML = textoContenido[counter].slice(0,-1);
         textoContenido[counter] = textos[counter].innerHTML;
+        if (textoContenido[counter].length == 0 && counter == 1 ) {
+            counter -= 1;
+        } 
     } else{
         AgregarPalabra = true;
     }
@@ -141,61 +139,15 @@ setInterval(function(){
         } else {
             if (counter < palabrasTexto.length) {
                 counter ++;
-            }
-            AgregarPalabra = false;
+            } 
         }
     }
     if (counter == palabrasTexto.length) {
-        counter = 0;
+        counter = 1;
+        AgregarPalabra = false;
     }
 }, 150);
 
-/* setInterval(function(){
-    if (textoPrimeroContenido.length > 0 && !AgregarPalabraPrimera) {
-        textoPrimero.innerHTML = textoPrimeroContenido.slice(0,-1);
-        textoPrimeroContenido = textoPrimero.innerHTML;
-    } else{
-        AgregarPalabraPrimera = true;
-    }
-    if (AgregarPalabraPrimera) {
-        if (textoPrimeroContenido.length < palabrasTextoPrimero[counter].length) {
-            textoPrimero.innerHTML = palabrasTextoPrimero[counter].slice(0,textoPrimeroContenido.length + 1);
-            textoPrimeroContenido = textoPrimero.innerHTML;
-        } else {
-            if (counter <= palabrasTextoPrimero.length) {
-                counter ++;
-            }
-            AgregarPalabraPrimera = false;
-        }
-    }
-    if (counter == palabrasTextoPrimero.length) {
-        counter = 0;
-    }
-}, 150); */
-
-/* setInterval(function(){
-    if (textoSegundoContenido.length > 0 && !AgregarPalabraSegunda) {
-        textoSegundo.innerHTML = textoSegundoContenido.slice(0,-1);
-        textoSegundoContenido = textoSegundo.innerHTML;
-    } else{
-        AgregarPalabraSegunda = true;
-    }
-    if (AgregarPalabraSegunda) {
-        if (textoSegundoContenido.length < palabrasTextoSegundo[counter].length) {
-            textoSegundo.innerHTML = palabrasTextoSegundo[counter].slice(0,textoSegundoContenido.length + 1);
-            textoSegundoContenido = textoSegundo.innerHTML;
-        } else {
-            if (counter <= palabrasTextoSegundo.length) {
-                counter ++;
-            }
-            AgregarPalabraSegunda = false;
-        }
-    }
-    if (counter == palabrasTextoSegundo.length) {
-        counter = 0;
-    }
-}, 150);
- */
 /* Funciones opcionales. */
 
 /* 
