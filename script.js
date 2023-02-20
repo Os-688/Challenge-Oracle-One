@@ -148,6 +148,25 @@ setInterval(function(){
     }
 }, 150);
 
+/* Funcion para el canvas y animacion del canvas. */
+
+window.onload = ()=>{
+    
+    const canvas = document.getElementById("canvas");
+
+    requestAnimationFrame(()=>{
+
+         const cWidth = window.innerWidth;
+         const cHeight = window.innerHeight;
+         canvas.width = cWidth;
+         canvas.height = cHeight;
+
+    });
+
+}
+
+    
+
 /* Funciones opcionales. */
 
 /* 
@@ -159,3 +178,19 @@ function myFunction() {
     // Alert the copied text
     alert("Copied the text: " + mensaje.value);
   }  */
+
+  /* function inicioDeAnimacion(){
+
+    tutorial.animate(animacionInicio, { id: "rompeOlas", delay: -500, iterations: 1, duration: 3000 });
+} */
+
+/* var animacionInicio = [
+    {right: "-294px"},
+    {transform: "rotateY(6deg) scaleX(1.1)", right: "-245px"},
+    {transform: "rotate(8deg)  scaleX(1.1)  scaleY(0.95)", right: "-119px"},
+    {transform: "scaleX(0.88)   scaleY(0.90)", right: "0px"},
+    {transform: "rotate(-6deg) scaleX(0.95)  scaleY(0.95)", right: "80px"}, 
+    {transform: "rotate(0deg) scaleX(1)  scaleY(1)", top: "500px", right: "62px"},
+    {right: "62px", top: "500px"}
+]
+ */
