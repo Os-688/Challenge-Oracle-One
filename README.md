@@ -12,4 +12,4 @@ Caracteristicas del proyecto:
 - 5° Animación de escribir/borrar texto infinita.
 
 Imagén del Encriptador:
-<h1><img = scr"https://raw.githubusercontent.com/Os-688/Challenge-Oracle-One/main/imagenes/Imagen-Encriptador.png "><h1>
+<h1><img src = "https://raw.githubusercontent.com/Os-688/Challenge-Oracle-One/main/imagenes/Imagen-Encriptador.png"><h1>
